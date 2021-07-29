@@ -6,9 +6,15 @@
                     <img class="w-full" src="../../assets/images/logo_white.png" alt="logo" />
                 </div>
 
-                <div>
-                    <button class="px-6 py-2 font-bold rounded-full text-white focus:outline-none">Crie uma conta</button>
-                    <button class="px-6 py-2 font-bold bg-white rounded-full text-brand-main focus:outline-none">Entrar</button>
+                <div class="flex">
+                    <button
+                        @click="() => emit('create-account')"
+                        class="px-6 py-2 font-bold rounded-full text-white focus:outline-none">
+                        Crie uma conta</button>
+                    <button
+                        @click="() => emit('login')"
+                        class="px-6 py-2 font-bold bg-white rounded-full text-brand-main focus:outline-none">
+                        Entrar</button>
                 </div>
             </div>
 
@@ -30,6 +36,9 @@
 
 <script>
 export default {
+  setup (_, { emit }) {
+    return { emit }
+  }
 }
 </script>
 
