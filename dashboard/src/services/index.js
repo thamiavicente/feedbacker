@@ -16,7 +16,7 @@ httpClient.interceptors.response.use((response) => response, (error) => {
   error.request.status === 500
 
   if (canThrowAnError) {
-    throw new Error (error.message)
+    throw new Error(error.message)
   }
 
   return error

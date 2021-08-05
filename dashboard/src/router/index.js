@@ -11,8 +11,8 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/feedbacks',
+    name: 'Feedbacks',
     component: Feedbacks,
     meta: {
       hasAuth: true
