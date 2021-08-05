@@ -1,20 +1,20 @@
 import { reactive } from 'vue'
 
 const state = reactive({
-    currentUser: {}
+  currentUser: {}
 })
 
 export default state
 
 export function cleanCurrentUser () {
-    state.currentUser = {}
+  state.currentUser = {}
 }
 
 export function setCurrentUser (user) {
-    state.currentUser = user
+  state.currentUser = user
 }
 
 export function setApiKey (apiKey) {
-    const currentUser = { ...state.currentUser, apiKey }
-    state.currentUser = currentUser
+  const currentUser = { ...state.currentUser, apiKey }
+  state.currentUser = currentUser
 }
