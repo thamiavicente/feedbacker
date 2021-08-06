@@ -85,7 +85,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"igor@igor.me\",\n    \"password\": \"1234\"\n}",
+							"raw": "{\n    \"email\": \"thami@email.com\",\n    \"password\": \"1234\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
