@@ -27,7 +27,6 @@
         width="600px"
         height="50px"
       />
-
       <div v-else class="flex py-3 pl-5 mt-2 rounded justify-between bg-brand-gray w-full lg:w-2/3">
         <span>{{ store.User.currentUser.apiKey }}</span>
         <div class="flex ml-20 mr-5">
@@ -56,7 +55,6 @@
         width="600px"
         height="50px"
       />
-
       <div v-else class="py-3 pl-5 pr-20 mt-2 rounded bg-brand-gray w-full lg:w-2/3 overflow-x-scroll">
         <pre>&lt;script src="https://thamiavicente-feedbacker-widget.netlify.app?api_key={{ store.User.currentUser.apiKey }}"&gt;&lt;/script&gt;</pre>
       </div>
@@ -71,14 +69,19 @@ import ContentLoader from '../../components/ContentLoader'
 import Icon from '../../components/Icon'
 import useStore from '../../hooks/useStore'
 import palette from '../../../palette'
+import { reactive } from '@vue/reactivity'
 
 export default {
   components: { HeaderLogged, Icon, ContentLoader },
 
   setup () {
     const store = useStore()
+    const state = reactive({
+      isLoading: false
+    })
 
     return {
+      state,
       store,
       brandColors: palette.brand
     }
