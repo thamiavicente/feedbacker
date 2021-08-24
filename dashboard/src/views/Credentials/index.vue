@@ -69,7 +69,9 @@ import ContentLoader from '../../components/ContentLoader'
 import Icon from '../../components/Icon'
 import useStore from '../../hooks/useStore'
 import palette from '../../../palette'
-import { reactive } from '@vue/reactivity'
+import { reactive } from 'vue'
+import services from '../../services'
+import { setApiKey } from '../../store/user'
 
 export default {
   components: { HeaderLogged, Icon, ContentLoader },
@@ -79,6 +81,22 @@ export default {
     const state = reactive({
       isLoading: false
     })
+
+  function handleError (error) {
+    state.isLoading = false
+    state.hasErrors = !!error
+  }
+
+  async function handleGenerateApikey () {
+    try {
+      state.isLoading = true
+      const { data } = await services.users.generateApiKey()
+      setApiKey(data.apiKey)
+      state.isLoading = false
+    } catch (error){
+      handleError(error)
+    }
+  }
 
     return {
       state,
