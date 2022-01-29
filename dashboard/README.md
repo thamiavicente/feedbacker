@@ -20,6 +20,15 @@ npm run build
 npm run test:unit
 ```
 
+- Run your unit test with --watch
+```
+npm run test:unit -- --watch
+```
+- Generate a new Snapshots
+```
+npm run test:unit -- -u
+```
+
 ### Run your end-to-end tests
 ```
 npm run test:e2e
