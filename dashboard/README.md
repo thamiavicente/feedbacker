@@ -33,6 +33,10 @@ npm run test:unit -- -u
 ```
 npm run test:e2e
 ```
+- Generate QA files
+```
+(npm bin)/cypress run
+```
 
 ### Lints and fixes files
 ```
