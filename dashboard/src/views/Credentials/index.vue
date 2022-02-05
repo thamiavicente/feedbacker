@@ -30,7 +30,11 @@
         />
         <div v-else class="flex py-3 pl-5 mt-2 rounded justify-between bg-brand-gray w-full lg:w-2/3">
           <span v-if="state.hasError">Erro ao carregar a apikey</span>
-          <span v-else>{{ store.User.currentUser.apiKey }}</span>
+          <span
+            id="apikey"
+            v-else
+          >{{ store.User.currentUser.apiKey }}
+          </span>
           <div v-if="!state.hasError" class="flex ml-20 mr-5">
             <icon
               @click="handleCopy"
@@ -40,6 +44,7 @@
               class="cursor-pointer"
             />
             <icon
+              id="generate-apikey"
               @click="handleGenerateApikey"
               name="loading"
               :color="brandColors.graydark"
