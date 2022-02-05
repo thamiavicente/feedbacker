@@ -35,7 +35,7 @@ describe ('Home', () => {
         cy.get('#password-field').type('1234')
         cy.get('#submit-button').click()
 
-        cy.url().should('include', '/feedbacks')
+        cy.url().should('equal', `${APP_URL}/feedbacks`)
     })
 
     it ('should return error with invalid email', () => {
@@ -74,10 +74,10 @@ describe ('Home', () => {
         cy.get('#password-field').type('1234')
         cy.get('#submit-button').click()
 
-        cy.url().should('include', '/feedbacks')
+        cy.url().should('equal', `${APP_URL}/feedbacks`)
         cy.wait(2000)
 
         cy.get('#logout-button').click()
-        cy.url().should('include', '/')
+        cy.url().should('equal', `${APP_URL}/`)
     })
 })
