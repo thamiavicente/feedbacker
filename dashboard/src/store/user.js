@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
 
 const userInitialState = {
-  currentUser : {}
+  currentUser: {}
 }
 
 let state = reactive(userInitialState)
