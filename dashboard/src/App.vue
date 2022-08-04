@@ -12,7 +12,6 @@ import { setCurrentUser } from './store/user'
 
 export default {
   components: { ModalFactory },
-
   setup () {
     const router = useRouter()
     const route = useRoute()

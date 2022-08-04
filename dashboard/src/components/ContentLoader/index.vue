@@ -36,7 +36,6 @@ export default {
       type: String
     }
   },
-
   setup (props) {
     const computedWidth = computed(() => {
       const value = Math.random() * (props.width - props.minWidth)

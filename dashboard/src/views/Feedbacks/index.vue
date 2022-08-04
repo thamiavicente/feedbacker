@@ -76,7 +76,6 @@ export default {
     FeedbackCard,
     FeedbackCardLoading
   },
-
   setup () {
     const state = reactive({
       isLoading: false,

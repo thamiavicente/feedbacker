@@ -34,7 +34,6 @@ export default {
     ModalLogin,
     ModalAccountCreate
   },
-
   setup () {
     const modal = useModal()
     const state = reactive({

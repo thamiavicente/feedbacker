@@ -146,6 +146,5 @@ export default {
       handleSubmit
     }
   }
-
 }
 </script>
